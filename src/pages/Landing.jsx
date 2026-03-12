@@ -69,7 +69,7 @@ function Landing() {
     <div>
       {/* NAV */}
       <nav style={styles.nav}>
-        <img src="/left-a.png" alt="Atlara" style={{ height: 52, width: "auto", objectFit: "contain", mixBlendMode: "multiply" }} />
+        <img src="/left-a.png" alt="Atlara" style={{ height: 60, width: "auto", objectFit: "contain", mixBlendMode: "multiply" }} />
         <ul style={styles.navLinks}>
           <li><a href="#productos" style={styles.navLink}>Productos</a></li>
           <li><a href="#ecosistema" style={styles.navLink}>Ecosistema</a></li>
@@ -187,7 +187,7 @@ function Landing() {
 
       {/* FOOTER */}
       <footer style={styles.footer}>
-        <img src="/left-a.png" alt="Atlara" style={{ height: 44, width: "auto", objectFit: "contain", mixBlendMode: "multiply" }} />
+        <img src="/left-a.png" alt="Atlara" style={{ height: 50, width: "auto", objectFit: "contain", mixBlendMode: "multiply" }} />
         <div style={styles.footerProducts}>
           <a href="#" style={{ ...styles.footerProduct, color: "#0090b0" }}>Finance</a>
           <a href="#" style={{ ...styles.footerProduct, color: "#1a9e6e" }}>Logistics</a>
@@ -206,7 +206,7 @@ function Landing() {
 }
 
 const styles = {
-  nav: { position:"fixed", top:0, left:0, right:0, zIndex:100, height:52, background:"rgba(255,255,255,.85)", backdropFilter:"blur(20px)", WebkitBackdropFilter:"blur(20px)", borderBottom:"1px solid rgba(0,0,0,.08)", display:"flex", alignItems:"center", justifyContent:"space-between", padding:"0 48px" },
+  nav: { position:"fixed", top:0, left:0, right:0, zIndex:100, height:70, background:"rgba(255,255,255,.85)", backdropFilter:"blur(20px)", WebkitBackdropFilter:"blur(20px)", borderBottom:"1px solid rgba(0,0,0,.08)", display:"flex", alignItems:"center", justifyContent:"space-between", padding:"0 48px" },
   navLinks: { display:"flex", alignItems:"center", gap:32, listStyle:"none" },
   navLink: { fontSize:13, fontWeight:400, color:"#86868b", textDecoration:"none" },
   navCta: { background:"#1d1d1f", color:"#ffffff", padding:"7px 16px", borderRadius:20, fontWeight:500, fontSize:13, textDecoration:"none" },
