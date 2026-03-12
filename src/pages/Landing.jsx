@@ -69,7 +69,7 @@ function Landing() {
     <div>
       {/* NAV */}
       <nav style={styles.nav}>
-        <img src="/left-a.png" alt="Atlara" style={{ height: 36, width: "auto", objectFit: "contain", mixBlendMode: "multiply" }} />
+        <img src="/solo-a.png" alt="Atlara" style={{ height: 36, width: "auto", objectFit: "contain", mixBlendMode: "multiply" }} />
         <ul style={styles.navLinks}>
           <li><a href="#productos" style={styles.navLink}>Productos</a></li>
           <li><a href="#ecosistema" style={styles.navLink}>Ecosistema</a></li>
@@ -187,7 +187,7 @@ function Landing() {
 
       {/* FOOTER */}
       <footer style={styles.footer}>
-        <img src="/left-a.png" alt="Atlara" style={{ height: 32, width: "auto", objectFit: "contain", mixBlendMode: "multiply" }} />
+        <img src="/solo-a.png" alt="Atlara" style={{ height: 32, width: "auto", objectFit: "contain", mixBlendMode: "multiply" }} />
         <div style={styles.footerProducts}>
           <a href="#" style={{ ...styles.footerProduct, color: "#0090b0" }}>Finance</a>
           <a href="#" style={{ ...styles.footerProduct, color: "#1a9e6e" }}>Logistics</a>
