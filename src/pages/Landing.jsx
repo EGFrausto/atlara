@@ -13,7 +13,7 @@ const productos = [
     desc: "Controla activos, contratos, clientes y pagos desde una sola plataforma. Adaptado a cualquier industria.",
     features: ["Dashboard en tiempo real", "Gestión de contratos", "Control de pagos y cobranza", "Reportes automáticos"],
     cta: "Iniciar sesión",
-    ctaLink: "http://localhost:3001",
+    ctaLink: "https://atlara-finance.vercel.app",
     activo: true,
   },
   {
