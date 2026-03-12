@@ -69,7 +69,7 @@ function Landing() {
     <div>
       {/* NAV */}
       <nav style={styles.nav}>
-        <span style={styles.navLogo}>Atlara</span>
+        <img src="/left-a.png" alt="Atlara" style={{ height: 32, width: "auto", objectFit: "contain", mixBlendMode: "multiply" }} />
         <ul style={styles.navLinks}>
           <li><a href="#productos" style={styles.navLink}>Productos</a></li>
           <li><a href="#ecosistema" style={styles.navLink}>Ecosistema</a></li>
@@ -191,13 +191,13 @@ function Landing() {
 
       {/* FOOTER */}
       <footer style={styles.footer}>
-        <div style={styles.footerLogo}>Atlara</div>
+        <img src="/left-a.png" alt="Atlara" style={{ height: 28, width: "auto", objectFit: "contain", mixBlendMode: "multiply" }} />
         <div style={styles.footerProducts}>
           <a href="#" style={{ ...styles.footerProduct, color: "#0090b0" }}>Finance</a>
           <a href="#" style={{ ...styles.footerProduct, color: "#1a9e6e" }}>Logistics</a>
           <a href="#" style={{ ...styles.footerProduct, color: "#5a54c4" }}>Systems</a>
         </div>
-        <div style={styles.footerCopy}>© 2025 Atlara. Todos los derechos reservados.</div>
+        <div style={styles.footerCopy}>© 2026 Atlara. Todos los derechos reservados.</div>
       </footer>
 
       <style>{`
