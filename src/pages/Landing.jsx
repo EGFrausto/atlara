@@ -55,7 +55,7 @@ function Landing() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          setTimeout(() => entry.target.classList.add("visible"), i * 80);
         }
       });
     }, { threshold: 0.1 });
@@ -69,7 +69,7 @@ function Landing() {
     <div>
       {/* NAV */}
       <nav style={styles.nav}>
-        <img src="/left-a.png" alt="Atlara" style={{ height: 32, width: "auto", objectFit: "contain", mixBlendMode: "multiply" }} />
+        <img src="/left-a.png" alt="Atlara" style={{ height: 36, width: "auto", objectFit: "contain", mixBlendMode: "multiply" }} />
         <ul style={styles.navLinks}>
           <li><a href="#productos" style={styles.navLink}>Productos</a></li>
           <li><a href="#ecosistema" style={styles.navLink}>Ecosistema</a></li>
@@ -113,20 +113,16 @@ function Landing() {
               key={p.id}
               ref={addReveal}
               className="reveal"
-              style={{
-                ...styles.productCard,
-                opacity: p.activo ? 1 : .7,
-                transitionDelay: `${i * 0.1}s`,
-              }}
+              style={{ ...styles.productCard, opacity: p.activo ? 1 : 0.7 }}
               onMouseEnter={e => {
                 e.currentTarget.style.transform = "translateY(-6px)";
                 e.currentTarget.style.boxShadow = "0 20px 60px rgba(0,0,0,.08)";
-                e.currentTarget.querySelector('.card-bar').style.opacity = "1";
+                e.currentTarget.querySelector(".card-bar").style.opacity = "1";
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.transform = "translateY(0)";
                 e.currentTarget.style.boxShadow = "none";
-                e.currentTarget.querySelector('.card-bar').style.opacity = "0";
+                e.currentTarget.querySelector(".card-bar").style.opacity = "0";
               }}
             >
               <div className="card-bar" style={{ ...styles.cardBar, background: p.gradiente }} />
@@ -191,7 +187,7 @@ function Landing() {
 
       {/* FOOTER */}
       <footer style={styles.footer}>
-        <img src="/left-a.png" alt="Atlara" style={{ height: 28, width: "auto", objectFit: "contain", mixBlendMode: "multiply" }} />
+        <img src="/left-a.png" alt="Atlara" style={{ height: 32, width: "auto", objectFit: "contain", mixBlendMode: "multiply" }} />
         <div style={styles.footerProducts}>
           <a href="#" style={{ ...styles.footerProduct, color: "#0090b0" }}>Finance</a>
           <a href="#" style={{ ...styles.footerProduct, color: "#1a9e6e" }}>Logistics</a>
@@ -210,19 +206,18 @@ function Landing() {
 }
 
 const styles = {
-  nav: { position:"fixed", top:0, left:0, right:0, zIndex:100, height:52, background:"rgba(255,255,255,.85)", backdropFilter:"blur(20px)", borderBottom:"1px solid rgba(0,0,0,.08)", display:"flex", alignItems:"center", justifyContent:"space-between", padding:"0 48px" },
-  navLogo: { fontFamily:"'Outfit', sans-serif", fontSize:17, fontWeight:700, color:"#1d1d1f", letterSpacing:-0.3 },
+  nav: { position:"fixed", top:0, left:0, right:0, zIndex:100, height:52, background:"rgba(255,255,255,.85)", backdropFilter:"blur(20px)", WebkitBackdropFilter:"blur(20px)", borderBottom:"1px solid rgba(0,0,0,.08)", display:"flex", alignItems:"center", justifyContent:"space-between", padding:"0 48px" },
   navLinks: { display:"flex", alignItems:"center", gap:32, listStyle:"none" },
   navLink: { fontSize:13, fontWeight:400, color:"#86868b", textDecoration:"none" },
   navCta: { background:"#1d1d1f", color:"#ffffff", padding:"7px 16px", borderRadius:20, fontWeight:500, fontSize:13, textDecoration:"none" },
   hero: { minHeight:"100vh", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", textAlign:"center", padding:"120px 48px 80px", position:"relative", overflow:"hidden" },
   heroBg: { position:"absolute", inset:0, background:"radial-gradient(ellipse 80% 50% at 20% 50%, rgba(0,180,216,.06) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 80% 30%, rgba(124,111,247,.05) 0%, transparent 60%)" },
-  heroTag: { display:"inline-flex", alignItems:"center", gap:6, background:"#f5f5f7", border:"1px solid #e8e8ed", borderRadius:20, padding:"6px 14px", fontSize:12, fontWeight:500, color:"#86868b", marginBottom:32 },
+  heroTag: { display:"inline-flex", alignItems:"center", gap:6, background:"#f5f5f7", border:"1px solid #e8e8ed", borderRadius:20, padding:"6px 14px", fontSize:12, fontWeight:500, color:"#86868b", marginBottom:32, position:"relative" },
   heroTagDot: { width:6, height:6, borderRadius:"50%", background:"#00b4d8" },
-  heroTitle: { fontFamily:"'Outfit', sans-serif", fontSize:"clamp(52px, 7vw, 88px)", fontWeight:800, lineHeight:1.0, letterSpacing:-2, color:"#1d1d1f", marginBottom:24 },
+  heroTitle: { fontFamily:"'Outfit', sans-serif", fontSize:"clamp(52px, 7vw, 88px)", fontWeight:800, lineHeight:1.0, letterSpacing:-2, color:"#1d1d1f", marginBottom:24, position:"relative" },
   heroGrad: { background:"linear-gradient(135deg, #0090b0, #00b4d8, #00d4f5)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text" },
-  heroSub: { fontSize:19, fontWeight:300, color:"#86868b", maxWidth:560, lineHeight:1.6, marginBottom:48 },
-  heroActions: { display:"flex", gap:12, alignItems:"center", justifyContent:"center" },
+  heroSub: { fontSize:19, fontWeight:300, color:"#86868b", maxWidth:560, lineHeight:1.6, marginBottom:48, position:"relative" },
+  heroActions: { display:"flex", gap:12, alignItems:"center", justifyContent:"center", position:"relative" },
   btnDark: { background:"#1d1d1f", color:"#ffffff", border:"none", borderRadius:24, padding:"14px 28px", fontSize:15, fontWeight:500, cursor:"pointer", textDecoration:"none" },
   btnOutline: { background:"transparent", color:"#1d1d1f", border:"1px solid #e8e8ed", borderRadius:24, padding:"14px 28px", fontSize:15, fontWeight:500, cursor:"pointer", textDecoration:"none" },
   products: { padding:"100px 48px", background:"#f5f5f7" },
@@ -241,7 +236,7 @@ const styles = {
   featureItem: { display:"flex", alignItems:"center", gap:8, fontSize:13, color:"#1d1d1f", fontWeight:400 },
   featureDot: { width:5, height:5, borderRadius:"50%", flexShrink:0 },
   productCta: { fontSize:14, fontWeight:600, textDecoration:"none" },
-  productCtaDisabled: { fontSize:14, fontWeight:600, opacity:.5 },
+  productCtaDisabled: { fontSize:14, fontWeight:600, opacity:0.5 },
   ecosystem: { padding:"100px 48px", background:"#1d1d1f", textAlign:"center" },
   ecoGrid: { display:"grid", gridTemplateColumns:"repeat(3, 1fr)", gap:1, background:"rgba(255,255,255,.08)", maxWidth:900, margin:"64px auto 0", borderRadius:20, overflow:"hidden" },
   ecoItem: { background:"#1d1d1f", padding:"48px 32px" },
@@ -251,7 +246,6 @@ const styles = {
   ctaTitle: { fontFamily:"'Outfit', sans-serif", fontSize:"clamp(40px, 5vw, 64px)", fontWeight:800, letterSpacing:-2, color:"#1d1d1f", lineHeight:1.05, marginBottom:20 },
   ctaSub: { fontSize:17, color:"#86868b", fontWeight:300, marginBottom:40, maxWidth:480, margin:"0 auto 40px" },
   footer: { background:"#f5f5f7", borderTop:"1px solid #e8e8ed", padding:"40px 48px", display:"flex", alignItems:"center", justifyContent:"space-between" },
-  footerLogo: { fontFamily:"'Outfit', sans-serif", fontSize:16, fontWeight:700, color:"#1d1d1f" },
   footerProducts: { display:"flex", gap:24 },
   footerProduct: { fontSize:12, fontWeight:500, textDecoration:"none" },
   footerCopy: { fontSize:12, color:"#86868b" },
